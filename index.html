@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <title>Sample</title>
 </head>
 <body>
-  2022-09-07 test
+
+  <p>current time: <span id="real-time"></span></p>
+
+  <script type="text/javascript">
+function Time() {
+   var realTime = new Date();
+   var hour = realTime.getHours();
+   var minutes  = realTime.getMinutes();
+   var seconds  = realTime.getSeconds();
+   var text = hour + ":" + minutes + ":" + seconds;
+   document.getElementById("real-time").innerHTML = text;
+}
+setInterval('Time()',1000);
+  </script>
 </body>
 </html>
